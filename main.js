@@ -8,6 +8,10 @@ function setup(){
 }
 function draw(){
     image(video,0,0,250,250)
+    if(status !="")
+    {
+        objectdetector.detect(video, gotresult);
+    }
 }
 function start(){
     objectdetector=ml5.objectDetector("cocossd",modeloaded);
@@ -18,4 +22,14 @@ function start(){
 function modeloaded(){
     console.log("cocossd linked.")
     status=true;
+}
+function gotresult(error,results){
+if(error){
+    console.log(error);
+}
+else{
+
+console.log(results);
+}
+
 }
