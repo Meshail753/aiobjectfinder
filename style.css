@@ -1,0 +1,15 @@
+body{
+    background-size:cover;
+}
+#txt1,#txt3{
+    color:black;
+}
+#input{
+    width:600px;
+    height: 40px;
+}
+canvas{
+    border:5px dashed black;
+    border-radius:5px;
+    box-shadow:5px 5px 5px white;
+}
